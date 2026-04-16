@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Bebi Reana</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #ffe6f0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .page {
+    display: none;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  .active {
+    display: block;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #ff4d88;
+    color: white;
+  }
+
+  .noBtn {
+    background: #aaa;
+    margin-left: 10px;
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="p1">
+  <h1>Advance Happy Birthday Bebi Reana 🎉</h1>
+  <button onclick="nextPage(2)">papindot po mæm</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+  <p>
+    Everything started nung inasar ako ng mga cm ko sayo and grabe yung relationship na nabuo natin dahil lang sa asar,
+    mas nakilala kita and that made me realize
+  </p>
+  <button onclick="nextPage(3)">Next</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+  <p>
+    I realized na you deserve to be loved and treated like a princess, nasabi ko na sa sarili ko nuon na gusto ko iparamdan
+    sayo kung ano talaga ang deserve mo
+  </p>
+  <button onclick="nextPage(4)">Next</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+  <p>
+    I wanna say sorry din pala if nagkaron ng times na I can't make my decision myself dahil sa problems ko kaya it affected everything
+    surrounding me including my friend and you especially my baby (yiee). You obviously did not deserve that...
+    that's why sa mga oras na yun nagdoubt din ako sa sarili ko if I should keep going and God told me to keep going kasi
+    this princess is gonna make me realize it and it did.
+  </p>
+  <button onclick="nextPage(5)">Next</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+  <p>
+    It's been exactly 5 months since we usap-usap ng walang label HAHA grabe noh ang bilis parang kahapon lang nagkaka-hiyaan pa tayo mag sabay sa recess
+  </p>
+  <button onclick="nextPage(6)">Next</button>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page" id="p6">
+  <p>
+    I know you confessed to me about your feelings a month ago and I'm super proud and shocked nung mga moments na yun
+    that's why I'm super pressured to respond kasi you're so strong and I don't wanna decide unconsciously...
+    uhmmmmm eto na po tatanong ko na
+  </p>
+  <button onclick="nextPage(7)">Next</button>
+</div>
+
+<!-- PAGE 7 (QUESTION) -->
+<div class="page" id="p7">
+  <h2>With a chance or not boi can I court you?</h2>
+  <button onclick="yes()">Yes 💖</button>
+  <button class="noBtn" onclick="no()">No 😢</button>
+</div>
+
+<!-- PAGE 8 (YES FINAL) -->
+<div class="page" id="p8">
+  <p>
+    Thank you so much for letting me court you even na hindi pa talaga natin kilala ang isa't isa ng sobra.
+    I will promise na never kong babaliin yang tiwala mo and I wanna say na I LOVE YOU SO MUCH BEBII 💖
+    ADVANCE HAPPY BIRTHDAY 🎉
+  </p>
+</div>
+
+<script>
+  function nextPage(n) {
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.getElementById("p" + n).classList.add("active");
+  }
+
+  function yes() {
+    nextPage(8);
+  }
+
+  function no() {
+    nextPage(7);
+    alert("Okay... try again 😢");
+  }
+</script>
+
+</body>
+</html>
